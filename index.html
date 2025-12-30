@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+
+  <title>Halaman Pembayaran Resmi — Yopandelreyz</title>
+  <meta
+    name="description"
+    content="Halaman pembayaran resmi Yopandelreyz. Pilih metode pembayaran dengan aman: salin nomor atau scan QRIS. UI premium, aksesibel, dan responsif."
+  />
+
+  <!-- Theme color -->
+  <meta name="theme-color" content="#0069ff" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/img/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/img/favicon-180.png" />
+
+  <!-- Open Graph (WhatsApp/Telegram preview) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Yopandelreyz" />
+  <meta property="og:title" content="Halaman Pembayaran Resmi — Yopandelreyz" />
+  <meta
+    property="og:description"
+    content="Pilih metode pembayaran dengan aman. Salin nomor tujuan atau scan QRIS."
+  />
+  <meta property="og:url" content="https://yopan-payment.fasturl.my.id/" />
+  <meta
+    property="og:image"
+    content="https://yopan-payment.fasturl.my.id/img/og-payment.png"
+  />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card (juga dipakai beberapa platform) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Halaman Pembayaran Resmi — Yopandelreyz" />
+  <meta
+    name="twitter:description"
+    content="Pilih metode pembayaran dengan aman. Salin nomor tujuan atau scan QRIS."
+  />
+  <meta
+    name="twitter:image"
+    content="https://yopan-payment.fasturl.my.id/img/og-payment.png"
+  />
+
+  <!-- Typography (Inter, modern SaaS UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles.css" />
+
+  <script>
+    // Theme init BEFORE paint (prevents flash)
+    (function () {
+      try {
+        var stored = localStorage.getItem("theme"); // 'light' | 'dark' | null
+        var prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        var shouldDark = stored === "dark" || (!stored && prefersDark);
+        document.documentElement.classList.toggle("dark", shouldDark);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip ke konten</a>
+
+  <header class="topbar" role="banner">
+    <div class="container topbar-inner">
+      <a class="brand" href="./" aria-label="Yopandelreyz Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">Yopandelreyz</span>
+
+        <span class="chip chip-secure" aria-label="Secure checkout">
+          <span class="chip-icon" aria-hidden="true"></span>
+          Secure checkout
+        </span>
+      </a>
+
+      <div class="topbar-actions">
+        <button
+          id="themeToggle"
+          class="icon-btn"
+          type="button"
+          aria-label="Toggle theme"
+        >
+          <span class="icon" id="themeIcon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page" id="main">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="kicker">Payment</p>
+          <h1 class="title">Halaman Pembayaran Resmi</h1>
+
+          <p class="subtitle">
+            Pilih metode pembayaran di bawah. Untuk e-wallet, salin nomor tujuan.
+            Untuk QRIS, scan dari aplikasi pembayaran Anda.
+            <strong>Jangan pernah</strong> bagikan PIN/OTP kepada siapa pun.
+          </p>
+
+          <div class="hero-badges" role="list">
+            <div class="mini" role="listitem">
+              <span class="mini-dot" aria-hidden="true"></span>
+              <div>
+                <div class="mini-title">Cepat & jelas</div>
+                <div class="mini-sub">1 klik untuk copy / unduh</div>
+              </div>
+            </div>
+
+            <div class="mini" role="listitem">
+              <span class="mini-dot" aria-hidden="true"></span>
+              <div>
+                <div class="mini-title">Aman & aksesibel</div>
+                <div class="mini-sub">Focus ring, ARIA, kontras</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-panel" aria-hidden="true">
+          <div class="glass-card">
+            <div class="glass-title"></div>
+            <div class="glass-line"></div>
+
+            <div class="glass-grid">
+              <div class="glass-chip"></div>
+              <div class="glass-chip"></div>
+              <div class="glass-chip"></div>
+              <div class="glass-chip"></div>
+            </div>
+
+            <div class="glass-foot">
+              <div class="glass-pill"></div>
+              <div class="glass-pill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="layout">
+        <!-- LEFT: guidance / trust -->
+        <aside class="panel panel-aside" aria-label="Panduan pembayaran">
+          <div class="panel-head">
+            <h2 class="h2">Panduan singkat</h2>
+            <p class="muted">Biar flow-nya jelas dan mengurangi salah transfer.</p>
+          </div>
+
+          <ol class="steps">
+            <li>
+              <span class="step-num">1</span>
+              <span class="step-text">Pilih metode pembayaran.</span>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <span class="step-text">Salin nomor / scan QRIS.</span>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <span class="step-text">Selesaikan pembayaran di aplikasi Anda.</span>
+            </li>
+            <li>
+              <span class="step-num">4</span>
+              <span class="step-text">Jika perlu, konfirmasi lewat WhatsApp.</span>
+            </li>
+          </ol>
+
+          <div class="notice" role="note">
+            <div class="notice-title">
+              <span class="notice-icon" aria-hidden="true"></span>
+              Tips keamanan
+            </div>
+
+            <ul class="notice-list">
+              <li>
+                Kami tidak pernah meminta <strong>OTP</strong>, <strong>PIN</strong>,
+                atau <strong>password</strong>.
+              </li>
+              <li>
+                Pastikan URL benar sebelum bayar:
+                <code class="mono" id="siteHost">yopan-payment.fasturl.my.id</code>
+              </li>
+              <li>Jika ragu, gunakan tombol WhatsApp untuk verifikasi.</li>
+            </ul>
+          </div>
+
+          <a
+            id="confirmBtn"
+            class="btn btn-primary btn-block"
+            href="https://wa.me/6285119509493"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Konfirmasi via WhatsApp
+          </a>
+
+          <p class="fineprint">
+            CTA ini opsional — metode pembayaran tetap bisa digunakan tanpa konfirmasi.
+          </p>
+        </aside>
+
+        <!-- RIGHT: payment methods -->
+        <section class="panel panel-main" aria-label="Metode pembayaran">
+          <div class="panel-head panel-head-row">
+            <div>
+              <h2 class="h2">Metode Pembayaran</h2>
+              <p class="muted">
+                Klik item untuk membuka detail. Semua aksi aman (copy/unduh) dan ada notifikasi.
+              </p>
+            </div>
+
+            <div class="hint" title="Disarankan menggunakan HTTPS">
+              <span class="hint-dot" aria-hidden="true"></span>
+              <span>HTTPS recommended</span>
+            </div>
+          </div>
+
+          <noscript>
+            <div class="noscript">
+              Halaman ini membutuhkan JavaScript untuk membuka panel metode pembayaran.
+            </div>
+          </noscript>
+
+          <div
+            class="list"
+            id="paymentList"
+            aria-label="Daftar metode pembayaran"
+          ></div>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <p>&copy; 2025 <strong>Yopandelreyz</strong>. All rights reserved.</p>
+          <p class="muted small">
+            Butuh bantuan? Hubungi WhatsApp yang tertera. Simpan bukti pembayaran Anda.
+          </p>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <a
+    class="fab"
+    href="https://wa.me/6285119509493"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Buka WhatsApp"
+  >
+    <img src="./img/wa.jpg" alt="WhatsApp" />
+    <span class="fab-ring" aria-hidden="true"></span>
+  </a>
+
+  <div
+    class="toast-viewport"
+    id="toastViewport"
+    aria-live="polite"
+    aria-atomic="true"
+  ></div>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
